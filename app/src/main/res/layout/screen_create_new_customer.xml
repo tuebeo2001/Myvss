@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:drawableStart="@drawable/ic_down_show_more"
+        android:drawablePadding="12dp"
+        android:gravity="center"
+        android:text="New"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="18dp"
+        android:backgroundTint="#2777B7"
+        android:paddingHorizontal="12dp"
+        app:icon="@drawable/ic_save"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvBack"
+        tools:layout_editor_absoluteX="46dp"
+        tools:layout_editor_absoluteY="45dp" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="#2777B7"
+        android:paddingHorizontal="12dp"
+        app:icon="@drawable/ic_close"
+        app:layout_constraintStart_toEndOf="@id/btnSave"
+        app:layout_constraintTop_toBottomOf="@id/tvBack" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnSave"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:backgroundTint="#FDFDFD">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:buttonTint="#ED722C"
+                android:text="Cá nhân"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginBottom="12dp"
+                android:buttonTint="#ED722C"
+                android:text="Công ty"
+                app:layout_constraintStart_toEndOf="@id/radioButton"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/edtNull"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:background="@drawable/border_round_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/radioButton" />
+
+            <EditText
+                android:id="@+id/edtCompany"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/border_login"
+                android:hint="Công ty"
+                android:padding="2dp"
+                android:paddingStart="12dp"
+                android:textColorHint="#545151"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtNull" />
+
+            <EditText
+                android:id="@+id/edtTags"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/border_login"
+                android:drawableEnd="@drawable/ic_down_show_more"
+                android:hint="Tags"
+                android:padding="2dp"
+                android:paddingStart="12dp"
+                android:textColorHint="#545151"
+                app:layout_constraintStart_toStartOf="@id/edtCompany"
+                app:layout_constraintTop_toBottomOf="@id/edtCompany" />
+
+            <TextView
+                android:id="@+id/tvCustomerType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:padding="4dp"
+                android:text="Loại khách hàng"
+                android:textColor="#545151"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/edtCompany"
+                app:layout_constraintTop_toBottomOf="@id/edtTags" />
+
+            <EditText
+                android:id="@+id/edtCustomerType"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="12dp"
+                android:background="@drawable/border_round_color"
+                android:drawableEnd="@drawable/ic_down_show_more"
+                app:layout_constraintBottom_toBottomOf="@id/tvCustomerType"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvCustomerType"
+                app:layout_constraintTop_toTopOf="@id/tvCustomerType" />
+
+            <TextView
+                android:id="@+id/tvType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:padding="4dp"
+                android:text="Mã"
+                android:textColor="#545151"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/tvCustomerType"
+                app:layout_constraintStart_toStartOf="@id/tvCustomerType"
+                app:layout_constraintTop_toBottomOf="@id/tvCustomerType" />
+
+            <EditText
+                android:id="@+id/edtType"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="12dp"
+                android:background="@drawable/border_login"
+                app:layout_constraintBottom_toBottomOf="@id/tvType"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvType"
+                app:layout_constraintTop_toTopOf="@id/tvType" />
+
+            <TextView
+                android:id="@+id/tvPotentialType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:padding="4dp"
+                android:text="Loại tiềm năng"
+                android:textColor="#545151"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/tvType"
+                app:layout_constraintTop_toBottomOf="@id/tvType" />
+
+            <EditText
+                android:id="@+id/edtPotentialType"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/border_round_color"
+                android:drawableEnd="@drawable/ic_down_show_more"
+                app:layout_constraintBottom_toBottomOf="@id/tvPotentialType"
+                app:layout_constraintEnd_toEndOf="@id/edtType"
+                app:layout_constraintStart_toStartOf="@id/edtType"
+                app:layout_constraintTop_toTopOf="@id/tvPotentialType" />
+
+            <TextView
+                android:id="@+id/tvAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:padding="4dp"
+                android:text="Địa chỉ"
+                android:textColor="#545151"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/tvPotentialType"
+                app:layout_constraintStart_toStartOf="@id/tvPotentialType"
+                app:layout_constraintTop_toBottomOf="@id/tvPotentialType" />
+
+            <EditText
+                android:id="@+id/edtAddress"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/border_login"
+                android:hint="Địa chỉ..."
+                android:padding="4dp"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/tvAddress"
+                app:layout_constraintEnd_toEndOf="@id/edtPotentialType"
+                app:layout_constraintStart_toStartOf="@id/edtPotentialType"
+                app:layout_constraintTop_toTopOf="@id/tvAddress" />
+
+            <EditText
+                android:id="@+id/edtCity"
+                android:layout_width="89dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/border_login"
+                android:drawableEnd="@drawable/ic_down_show_more"
+                android:hint="Tỉnh/Thành phố"
+                android:padding="2dp"
+                android:paddingHorizontal="2dp"
+                android:paddingVertical="0dp"
+                android:textSize="8sp"
+                app:layout_constraintEnd_toStartOf="@+id/edtDistrict"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@id/edtAddress"
+                app:layout_constraintTop_toBottomOf="@id/edtAddress" />
+
+            <EditText
+                android:id="@+id/edtWard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/border_login"
+                android:drawableEnd="@drawable/ic_down_show_more"
+                android:hint="Phường"
+                android:padding="2dp"
+                android:paddingHorizontal="2dp"
+                android:paddingVertical="0dp"
+                android:textSize="8sp"
+
+                app:layout_constraintEnd_toEndOf="@id/edtAddress"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/edtDistrict"
+                app:layout_constraintTop_toBottomOf="@id/edtAddress" />
+
+            <EditText
+                android:id="@+id/edtDistrict"
+                android:layout_width="89dp"
+                android:layout_height="0dp"
+
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/border_login"
+                android:drawableEnd="@drawable/ic_down_show_more"
+                android:hint="Quận/Huyện"
+                android:padding="2dp"
+                android:paddingHorizontal="2dp"
+                android:paddingVertical="0dp"
+                android:textSize="8sp"
+                app:layout_constraintEnd_toStartOf="@+id/edtWard"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/edtCity"
+                app:layout_constraintTop_toBottomOf="@id/edtAddress" />
+
+            <EditText
+                android:id="@+id/edtNation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/border_login"
+                android:hint="Quốc gia"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="5dp"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@id/edtAddress"
+                app:layout_constraintStart_toStartOf="@id/edtAddress"
+                app:layout_constraintTop_toBottomOf="@id/edtCity" />
+
+            <TextView
+                android:id="@+id/tvTax"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:padding="4dp"
+                android:text="Mã số thuế"
+                android:textColor="#545151"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/tvAddress"
+                app:layout_constraintStart_toStartOf="@id/tvAddress"
+                app:layout_constraintTop_toBottomOf="@id/edtNation" />
+
+            <EditText
+                android:id="@+id/edtTax"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/border_login"
+                android:padding="4dp"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/tvTax"
+                app:layout_constraintEnd_toEndOf="@id/edtAddress"
+                app:layout_constraintStart_toStartOf="@id/edtAddress"
+                app:layout_constraintTop_toTopOf="@id/tvTax" />
+
+            <TextView
+                android:id="@+id/tvReview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:padding="4dp"
+                android:text="Đánh giá"
+                android:textColor="#545151"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/tvType"
+                app:layout_constraintTop_toBottomOf="@id/tvTax" />
+
+            <EditText
+                android:id="@+id/edtReview"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/border_round_color"
+                android:drawableEnd="@drawable/ic_down_show_more"
+                app:layout_constraintBottom_toBottomOf="@id/tvReview"
+                app:layout_constraintEnd_toEndOf="@id/edtType"
+                app:layout_constraintStart_toStartOf="@id/edtType"
+                app:layout_constraintTop_toTopOf="@id/tvReview" />
+
+            <TextView
+                android:id="@+id/tvCareer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:padding="4dp"
+                android:text="Ngành nghề"
+                android:textColor="#545151"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/tvType"
+                app:layout_constraintTop_toBottomOf="@id/tvReview" />
+
+            <EditText
+                android:id="@+id/edtCareer"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/border_round_color"
+                android:drawableEnd="@drawable/ic_down_show_more"
+                app:layout_constraintBottom_toBottomOf="@id/tvCareer"
+                app:layout_constraintEnd_toEndOf="@id/edtType"
+                app:layout_constraintStart_toStartOf="@id/edtType"
+                app:layout_constraintTop_toTopOf="@id/tvCareer" />
+
+            <TextView
+                android:id="@+id/tvRoom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:padding="4dp"
+                android:text="Phòng ban"
+                android:textColor="#545151"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/tvType"
+                app:layout_constraintTop_toBottomOf="@id/tvCareer" />
+
+            <TextView
+                android:id="@+id/edtRoom"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center||left"
+                android:text="Vss"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/tvRoom"
+                app:layout_constraintEnd_toEndOf="@id/edtType"
+                app:layout_constraintStart_toStartOf="@id/edtType"
+                app:layout_constraintTop_toTopOf="@id/tvRoom" />
+
+            <TextView
+                android:id="@+id/tvSource"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:padding="4dp"
+                android:text="Nguồn"
+                android:textColor="#545151"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/tvAddress"
+                app:layout_constraintStart_toStartOf="@id/tvAddress"
+                app:layout_constraintTop_toBottomOf="@id/tvRoom" />
+
+            <EditText
+                android:id="@+id/edtSource"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/border_round_color"
+                android:drawableEnd="@drawable/ic_down_show_more"
+                android:padding="4dp"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/tvSource"
+                app:layout_constraintEnd_toEndOf="@id/edtAddress"
+                app:layout_constraintStart_toStartOf="@id/edtAddress"
+                app:layout_constraintTop_toTopOf="@id/tvSource" />
+
+            <TextView
+                android:id="@+id/tvPosition"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:padding="4dp"
+                android:text="Chức vụ"
+                android:textColor="#545151"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/tvPotentialType"
+                app:layout_constraintStart_toStartOf="@id/tvPotentialType"
+                app:layout_constraintTop_toBottomOf="@id/tvSource" />
+
+            <EditText
+                android:id="@+id/edtPosition"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/border_login"
+                android:padding="4dp"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/tvPosition"
+                app:layout_constraintEnd_toEndOf="@id/edtPotentialType"
+                app:layout_constraintStart_toStartOf="@id/edtPotentialType"
+                app:layout_constraintTop_toTopOf="@id/tvPosition"/>
+
+            <TextView
+                android:id="@+id/tvPhone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:padding="4dp"
+                android:text="Điện thoại"
+                android:textColor="#545151"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/tvPotentialType"
+                app:layout_constraintStart_toStartOf="@id/tvPotentialType"
+                app:layout_constraintTop_toBottomOf="@id/tvPosition" />
+
+            <EditText
+                android:id="@+id/edtPhone"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/border_login"
+                android:padding="4dp"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/tvPhone"
+                app:layout_constraintEnd_toEndOf="@id/edtPotentialType"
+                app:layout_constraintStart_toStartOf="@id/edtPotentialType"
+                app:layout_constraintTop_toTopOf="@id/tvPhone"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
